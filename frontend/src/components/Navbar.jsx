@@ -1,11 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import Logo from "../assets/logo.png";
 import styles from "./Navbar.module.css";
-import Papuga from "../assets/papuga.png";
 
 const LINKS = [
         { to: "/", label: "Home" },
-        { to: "/about", label: "Contact" }
+        { to: "/about", label: "About" },
+        { to: "/contact", label: "Contact" }
 ];
 
 const Navbar = () => {

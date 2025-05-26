@@ -1,22 +1,30 @@
 import { Link } from "@tanstack/react-router";
 import Logo from "../assets/logo.png";
 import styles from "./Navbar.module.css";
+import Papuga from "../assets/papuga.png";
+
+const LINKS = [
+        { to: "/", label: "Home" },
+        { to: "/about", label: "Contact" }
+];
 
 const Navbar = () => {
     return (
         <nav className={styles.navbar}>
-            <img src={Logo} alt="Logo" className={styles.navbar__logo} />
+            
+            <h1>&#129436; Papuga</h1>
             <ul className={styles.navbar__links}>
-                <li>
-                    <Link to="/">
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/about">
-                        About
-                    </Link>
-                </li>
+                {LINKS.map((link) => (
+                    <li key={link.to}>
+                        <Link 
+                            to={link.to}
+                            className={styles.navbar__link}
+                            activeProps={{ className: styles['navbar__link--active'] }}
+                        >
+                            {link.label}
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </nav>
     );

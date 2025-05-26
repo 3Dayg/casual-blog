@@ -3,4 +3,53 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+}
+
+/* Global variables */
+:root {
+  /* Font Families */
+  --font-family-sans: 'Arial', 'Helvetica', sans-serif;
+  --font-family-serif: 'Georgia', 'Times New Roman', serif;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 2rem;
+
+  /* Spacing (Padding/Margin) */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+   /* Parrot-inspired colors */
+  --color-scarlet-red: #E63946;
+  --color-sunshine-yellow: #F1C40F;
+  --color-tropical-blue: #1D84B5;
+  --color-jungle-green: #2ECC71;
+  --color-deep-indigo: #2C3E50;
+  --color-white: #FFFFFF;
+  --color-light-background: #EAF6FF;
+
+  /* Utility colors */
+  --color-text-primary: var(--color-deep-indigo);
+  --color-text-light: var(--color-white);
+  --color-accent-hover: #FFD54F; /* slightly lighter yellow for hover */
+
+  /* Responsive Font Scaling */
+  --font-size-base: 16px;
 }

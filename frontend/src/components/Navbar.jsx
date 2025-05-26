@@ -10,8 +10,7 @@ const LINKS = [
 const Navbar = () => {
     return (
         <nav className={styles.navbar}>
-            
-            <h1>&#129436; Papuga</h1>
+            <h1 className={styles.navbar__header}>&#129436; Papuga</h1>
             <ul className={styles.navbar__links}>
                 {LINKS.map((link) => (
                     <li key={link.to}>

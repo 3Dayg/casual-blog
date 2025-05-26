@@ -8,8 +8,9 @@
     width: 100wh;
 }
 
-.navbar__logo {
-    height: 100px;
+.navbar__header {
+    font-size: var(--font-size-xl);
+    color: var( --color-white);
 }
 
 .navbar__links {
@@ -23,7 +24,7 @@
 .navbar__link{
     color: var(--color-white);
     text-decoration: none !important;
-    font-size: var(--font-size-navbar, 1.1rem);
+    font-size: var( --font-size-sm);
     transition: color 0.3s ease;
 }
 

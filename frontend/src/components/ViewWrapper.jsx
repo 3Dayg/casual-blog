@@ -1,6 +1,8 @@
+import styles from "./ViewWrapper.module.css";
+
 const ViewWrapper = ({ children }) => {
   return (
-    <div>
+    <div className={styles.viewWrapper}>
       {children}
     </div>
   );

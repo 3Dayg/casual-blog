@@ -11,7 +11,7 @@ const getBreakpoint = (width) => {
     if (width < BREAKPOINTS.xs) return "xs";
     if (width < BREAKPOINTS.sm) return "sm";
     if (width < BREAKPOINTS.md) return "md";
-    if (width < BREAKPOINTS.lg) return "lg";
+    if (width < BREAKPOINTS.lg) return "lgL";
     return "xl";
   };
 

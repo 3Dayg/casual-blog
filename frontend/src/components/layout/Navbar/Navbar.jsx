@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import styles from "./Navbar.module.css";
-import useBreakpoint from "../../../../hooks/useBreakpoint";
-import { useModal } from "../../../../providers/ModalProvider/ModalProvider";
+import useBreakpoint from "@hooks/useBreakpoint";
+import { useModal } from "@providers/ModalProvider/ModalProvider";
 import { TiThMenu } from "react-icons/ti";
 
 const LINKS = [

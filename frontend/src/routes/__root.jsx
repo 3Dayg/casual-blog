@@ -3,7 +3,7 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
 import "../global.css";
 import ModalProvider from '../providers/ModalProvider/ModalProvider';
-import Navbar from '../features/navigation/components/Navbar/Navbar';
+import Navbar from '../components/layout/Navbar/Navbar';
 
 export const Route = createRootRoute({
     component: () => (

@@ -15,7 +15,6 @@ function ModalProvider({ children }) {
     const dialog = React.useRef();
 
     const openModal = (type, props = {}) => {
-        console.log("test apertura", { type, props })
         setModal({ type, props });
         dialog.current.open();
     };

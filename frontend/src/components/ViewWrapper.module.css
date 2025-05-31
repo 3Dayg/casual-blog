@@ -5,5 +5,5 @@
     justify-content: center;
     padding: 4.5rem 2rem 2rem 2rem; /* Adjusted padding for top and bottom */
     background-color: var(--color-light-background); /* Light background for contrast */
-    min-height: 100vh; /* Full viewport height */
+    /* min-height: 100vh;  */
 }

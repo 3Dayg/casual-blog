@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
-import ModalContainer from "./ModalContainer";
-import NavModal from "./NavModal";
+import ModalContainer from "./components/ModalContainer/ModalContainer";
+import NavModal from "./components/NavModal/NavModal";
 
 
 export const ModalContext = createContext();
@@ -10,12 +10,11 @@ const modalComponents = {
     'nav': NavModal,
 };
 
-export function ModalProvider({ children }) {
+function ModalProvider({ children }) {
     const [modal, setModal] = useState(null);
     const dialog = React.useRef();
 
     const openModal = (type, props = {}) => {
-        console.log("test apertura", { type, props })
         setModal({ type, props });
         dialog.current.open();
     };
@@ -42,3 +41,4 @@ export function ModalProvider({ children }) {
     )
 }
 
+export default ModalProvider;

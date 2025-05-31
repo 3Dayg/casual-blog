@@ -1,8 +1,9 @@
-import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
+import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
-import Navbar from '../components/Navbar';
+
 import "../global.css";
-import { ModalProvider } from '../context/ModalContext';
+import ModalProvider from '../providers/ModalProvider/ModalProvider';
+import Navbar from '../components/layout/Navbar/Navbar';
 
 export const Route = createRootRoute({
     component: () => (

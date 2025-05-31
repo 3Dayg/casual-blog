@@ -5,6 +5,7 @@ import { useRef } from "react";
 import NavMenu from "./NavMenu";
 import ParrotSvg from "../assets/parrot.svg";
 import { useModal } from "../context/ModalContext";
+import { TiThMenu } from "react-icons/ti";
 
 const LINKS = [
     { to: "/", label: "Home" },
@@ -44,13 +45,8 @@ const Navbar = () => {
                     breakpoint === "xs" &&
                     <h1
                         onClick={() => openModal('nav')}
-                    //    onClick={() => openModal('confirm', {
-                    //     message: 'Do you want to delete this?',
-                    //     onConfirm: () => alert('Deleted!')
-                    //     })}
-                    // onClick={() => menu.current.showModal()}
                     >
-                        &#128221;
+                        <TiThMenu />
                     </h1>
                 }
             </nav>

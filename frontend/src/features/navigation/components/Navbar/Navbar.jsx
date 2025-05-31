@@ -1,10 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import styles from "./Navbar.module.css";
-import useBreakpoint from "../hooks/useBreakpoint";
-import { useRef } from "react";
-import NavMenu from "./NavMenu";
-import ParrotSvg from "../assets/parrot.svg";
-import { useModal } from "../context/ModalContext";
+import useBreakpoint from "../../../../hooks/useBreakpoint";
+import { useModal } from "../../../../providers/ModalProvider/ModalProvider";
 import { TiThMenu } from "react-icons/ti";
 
 const LINKS = [
@@ -15,7 +12,6 @@ const LINKS = [
 
 const Navbar = () => {
     const breakpoint = useBreakpoint();
-    const menu = useRef();
     const {
         openModal
     } = useModal();
@@ -50,7 +46,6 @@ const Navbar = () => {
                     </h1>
                 }
             </nav>
-            <NavMenu ref={menu} />
         </>
     );
 };

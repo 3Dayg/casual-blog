@@ -1,7 +1,7 @@
-import Post from "./Post";
-import Picture1 from "../assets/picture-1.jpg";
-import Picture2 from "../assets/picture-2.jpg";
-import Picture3 from "../assets/picture-3.jpg";
+import Post from "../Post/Post";
+import Picture1 from "../../assets/picture-1.jpg";
+import Picture2 from "../../assets/picture-2.jpg";
+import Picture3 from "../../assets/picture-3.jpg";
 import styles from "./PostContainer.module.css";
 
 const POSTS = [

@@ -1,8 +1,8 @@
-import ViewWrapper from "../components/ViewWrapper";
+import View from "../components/View/View";
 
 function Contact() {
     return (
-        <ViewWrapper>
+        <View>
             <h1>Contact Us</h1>
             <p>If you have any questions, feel free to reach out!</p>
             <form>
@@ -17,7 +17,7 @@ function Contact() {
                 
                 <button type="submit">Send</button>
             </form>
-        </ViewWrapper>
+        </View>
     );
 }
 

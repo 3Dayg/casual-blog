@@ -1,15 +1,11 @@
-import Post from "../components/Post";
-import ViewWrapper from "../components/ViewWrapper";
-import Picture1 from "../assets/picture-1.jpg";
-import Picture2 from "../assets/picture-2.jpg";
-import Picture3 from "../assets/picture-3.jpg";
-import PostContainer from "../components/PostContainer";
+import PostContainer from "../features/posts/components/PostContainer/PostContainer";
+import View from "../components/View/View";
 
 function Home() {
     return(
-        <ViewWrapper>
+        <View>
             <PostContainer />
-        </ViewWrapper>
+        </View>
     )
 }
 

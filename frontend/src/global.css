@@ -22,18 +22,18 @@ h1 {
   --font-family-serif: 'Georgia', 'Times New Roman', serif;
 
   /* Font Sizes */
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-md: 1rem;
+  --font-size-xs: 0.875rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.125rem;
   --font-size-lg: 1.25rem;
-  --font-size-xl: 2rem;
+  --font-size-xl: 1.5rem;
 
   /* Spacing (Padding/Margin) */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
 
    /* Parrot-inspired colors */
   --color-scarlet-red: #E63946;
@@ -51,4 +51,24 @@ h1 {
 
   /* Responsive Font Scaling */
   --font-size-base: 16px;
+}
+
+.size-xs {
+  font-size: var(--font-size-xs);
+}
+
+.size-sm {
+  font-size: var(--font-size-sm);
+}
+
+.size-md {
+  font-size: var(--font-size-md);
+}
+
+.size-lg {
+  font-size: var(--font-size-lg);
+}
+
+.size-xl {
+  font-size: var(--font-size-xl);
 }

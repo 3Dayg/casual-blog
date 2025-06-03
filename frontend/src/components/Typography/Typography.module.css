@@ -1,0 +1,39 @@
+.typography {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  transition: font-size 0.2s ease, margin-bottom 0.2s ease;
+}
+
+/* Size variants */
+.size-xs { font-size: var(--font-size-xs); }
+.size-sm { font-size: var(--font-size-sm); }
+.size-md { font-size: var(--font-size-md); }
+.size-lg { font-size: var(--font-size-lg); }
+.size-xl { font-size: var(--font-size-xl); }
+
+/* Spacing variants */
+.spacing-none { margin-bottom: 0; }
+.spacing-xs { margin-bottom: var(--spacing-xs); }
+.spacing-sm { margin-bottom: var(--spacing-sm); }
+.spacing-md { margin-bottom: var(--spacing-md); }
+.spacing-lg { margin-bottom: var(--spacing-lg); }
+
+/* Variant-specific styles */
+.variant-h1, .variant-h2, .variant-h3, 
+.variant-h4, .variant-h5, .variant-h6 {
+  font-weight: 700;
+}
+
+.variant-p {
+  line-height: 1.6;
+}
+
+.variant-label {
+  font-weight: 500;
+  display: inline-block;
+}
+
+.variant-span {
+  color: inherit;
+}

@@ -20,7 +20,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    font-size: var(--font-size-md);
+
     padding: var(--spacing-md);
     border-bottom-right-radius: var(--spacing-md);
 }

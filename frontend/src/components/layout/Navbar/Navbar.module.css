@@ -36,7 +36,7 @@
     color: var(--color-deep-indigo);
 }
 
-.navbar__link--active {
+.navbar__link--active > *{
     color: var(--color-sunshine-yellow);
     font-weight: bold;
     display: inline-block;

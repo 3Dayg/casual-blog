@@ -1,0 +1,16 @@
+
+.spacing-none {
+  margin-bottom: 0;
+}
+
+.spacing-xs {
+  margin-bottom: 4px;
+}
+
+.spacing-sm {
+  margin-bottom: 8px;
+}
+
+.spacing-md {
+  margin-bottom: 16px;
+}

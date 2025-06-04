@@ -5,6 +5,7 @@
     left: 50%;
     z-index: 1000;
     transform: translate(-50%, -50%);
+    border-radius: var(--spacing-md);
 }
 
 .modal-container::backdrop {

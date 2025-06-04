@@ -56,3 +56,31 @@
   25% { transform: rotate(-5deg); }
   75% { transform: rotate(5deg); }
 }
+
+.navbar__menuButton {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: var(--font-size-xl);
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: var(--spacing-xs);
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__menuButton:hover {
+    color: var(--color-sunshine-yellow);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar__menuButton:active {
+    transform: translateY(2px) scale(0.98);
+}
+
+.navbar__menuButton:focus {
+    outline: 2px solid var(--color-sunshine-yellow);
+    outline-offset: 2px;
+}

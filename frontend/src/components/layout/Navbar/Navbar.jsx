@@ -18,11 +18,15 @@ const Navbar = () => {
     } = useModal();
 
     return (
-        <>
-            <nav className={styles.navbar}>
-                <h1 className={styles.navbar__header}>Papuga &#129436;
-                    {/* <img src={ParrotSvg} alt="Your SVG" /> */}
-                </h1>
+        <>            <nav className={styles.navbar}>
+                <Typography 
+                    variant="h1" 
+                    size="responsive" 
+                    spacing="none"
+                    className={styles.navbar__header}
+                >
+                    Papuga &#129436;
+                </Typography>
                 {breakpoint !== "xs" &&
                     <ul className={styles.navbar__links}>
                         {LINKS.map((link) => (
@@ -39,14 +43,15 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
-                }
-                {
+                }                {
                     breakpoint === "xs" &&
-                    <h1
+                    <button
                         onClick={() => openModal('nav')}
+                        className={styles.navbar__menuButton}
+                        aria-label="Open navigation menu"
                     >
                         <TiThMenu />
-                    </h1>
+                    </button>
                 }
             </nav>
         </>

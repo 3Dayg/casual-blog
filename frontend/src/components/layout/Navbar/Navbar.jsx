@@ -3,6 +3,7 @@ import styles from "./Navbar.module.css";
 import useBreakpoint from "@hooks/useBreakpoint";
 import { useModal } from "@providers/ModalProvider/ModalProvider";
 import { TiThMenu } from "react-icons/ti";
+import { Typography } from "@components/Typography/Typography";
 
 const LINKS = [
     { to: "/", label: "Home" },
@@ -11,7 +12,7 @@ const LINKS = [
 ];
 
 const Navbar = () => {
-    const breakpoint = useBreakpoint();
+    const { breakpoint } = useBreakpoint();
     const {
         openModal
     } = useModal();
@@ -31,7 +32,9 @@ const Navbar = () => {
                                     className={styles.navbar__link}
                                     activeProps={{ className: styles['navbar__link--active'] }}
                                 >
-                                    {link.label}
+                                    <Typography variant="label" size="responsive" spacing="responsive">
+                                        {link.label}
+                                    </Typography>
                                 </Link>
                             </li>
                         ))}

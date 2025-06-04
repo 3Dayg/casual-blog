@@ -18,7 +18,7 @@ const getBreakpoint = (width) => {
 /**
  * Custom React hook that returns the current screen size breakpoint as a string.
  *
- * @returns {"xs" | "sm" | "md" | "lgL" | "xl"} The current breakpoint based on window width.
+ * @returns {"xs" | "sm" | "md" | "lg" | "xl"} The current breakpoint based on window width.
  *
  * Breakpoints:
  *   - "xs": width < 400px
@@ -35,7 +35,7 @@ export default function useBreakpoint() {
       case "xs": return "sm";
       case "sm": return "sm";
       case "md": return "md";
-      case "lgL": return "lg"; // Note: your hook has "lgL" typo
+      case "lg": return "lg";
       case "xl": return "lg";
       default: return "md";
     }
@@ -46,7 +46,7 @@ export default function useBreakpoint() {
       case "xs": return "xs";
       case "sm": return "sm";
       case "md": return "sm";
-      case "lgL": return "md";
+      case "lg": return "md";
       case "xl": return "md";
       default: return "sm";
     }

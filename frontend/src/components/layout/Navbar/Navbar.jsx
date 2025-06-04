@@ -3,7 +3,7 @@ import styles from "./Navbar.module.css";
 import useBreakpoint from "@hooks/useBreakpoint";
 import { useModal } from "@providers/ModalProvider/ModalProvider";
 import { TiThMenu } from "react-icons/ti";
-import { Typography } from "../../Typography/Typography";
+import { Typography } from "@components/Typography/Typography";
 
 const LINKS = [
     { to: "/", label: "Home" },

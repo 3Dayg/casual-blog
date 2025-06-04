@@ -1,5 +1,6 @@
 import styles from './NavModal.module.css';
 import { Link } from '@tanstack/react-router';
+import { Typography } from '@components/Typography/Typography';
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
@@ -9,8 +10,7 @@ const NAV_LINKS = [
 
 const NavModal = ({ onClose }) => {
   return (
-    <div className={styles['nav-modal']}>
-      <nav>
+      <nav className={styles['nav-modal']}>
         <ul>
           {NAV_LINKS.map(link => (
             <li key={link.to}>
@@ -18,15 +18,16 @@ const NavModal = ({ onClose }) => {
                 to={link.to}
                 onClick={onClose}
                 style={{ textDecoration: 'none', color: 'inherit' }}
+                activeProps={{ className: styles['nav-modal__link--active'] }}
               >
-                {link.label}
+                <Typography variant="h1" size="responsive" spacing="responsive">
+                    {link.label}
+                </Typography>
               </Link>
             </li>
           ))}
         </ul>
       </nav>
-      <button onClick={onClose}>Close</button>
-    </div>
   );
 };
 

@@ -1,9 +1,10 @@
 /* Reset margins and paddings for the body and html */
-#root ,body, html {
+#root ,body, html, dialog {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto Slab", serif;
+  border: none;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -11,13 +11,20 @@ const NAV_LINKS = [
 const NavModal = ({ onClose }) => {
   return (
       <nav className={styles['nav-modal']}>
+        <button 
+          className={styles['nav-modal__close-btn']}
+          onClick={onClose}
+          aria-label="Close navigation menu"
+        >
+          X
+        </button>
+        
         <ul>
           {NAV_LINKS.map(link => (
             <li key={link.to}>
               <Link
                 to={link.to}
                 onClick={onClose}
-                style={{ textDecoration: 'none', color: 'inherit' }}
                 activeProps={{ className: styles['nav-modal__link--active'] }}
               >
                 <Typography variant="h1" size="responsive" spacing="responsive">

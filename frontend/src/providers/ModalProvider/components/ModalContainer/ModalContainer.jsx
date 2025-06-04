@@ -1,8 +1,9 @@
 import React, { useImperativeHandle } from 'react';
 import { createPortal } from "react-dom";
 import styles from "./ModalContainer.module.css";
+import clsx from "clsx";
 
-function ModalContainer({ children, ref }) {
+function ModalContainer({ children, size = 'medium', className, ref }) {
 
     const dialog = React.useRef();
 
@@ -22,7 +23,11 @@ function ModalContainer({ children, ref }) {
     return createPortal(
         <dialog
             ref={dialog}
-            className={styles["modal-container"]}
+            className={clsx(
+                styles["modal-container"],
+                styles[`modal-container--${size}`],
+                className && styles[className]
+            )}
         >
             {children}
         </dialog>,

@@ -2,12 +2,17 @@ import React, { createContext, useContext, useState } from "react";
 import ModalContainer from "./components/ModalContainer/ModalContainer";
 import NavModal from "./components/NavModal/NavModal";
 
-
 export const ModalContext = createContext();
 export const useModal = () => useContext(ModalContext);
 
 const modalComponents = {
-    'nav': NavModal,
+    'nav': { 
+        component: NavModal, 
+        size: 'fullscreen', // or 'small', 'medium', 'large', 'custom'
+    },
+    // 'confirm': { component: ConfirmModal, size: 'small' },
+    // 'settings': { component: SettingsModal, size: 'large' },
+    // 'custom': { component: CustomModal, size: 'medium', className: 'custom-modal' }
 };
 
 function ModalProvider({ children }) {
@@ -24,7 +29,8 @@ function ModalProvider({ children }) {
         dialog.current.close();
     };
 
-    const ModalComponent = modal?.type ? modalComponents[modal.type] : null;
+    const modalConfig = modal?.type ? modalComponents[modal.type] : null;
+    const ModalComponent = modalConfig?.component;
 
     return (
         <ModalContext.Provider value={{
@@ -32,7 +38,11 @@ function ModalProvider({ children }) {
             openModal
         }}>
             {children}
-            <ModalContainer ref={dialog}>
+            <ModalContainer 
+                ref={dialog}
+                size={modalConfig?.size}
+                className={modalConfig?.className}
+            >
                 {ModalComponent && (
                   <ModalComponent {...modal.props} onClose={closeModal} />
                 )}
